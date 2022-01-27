@@ -64,11 +64,6 @@ const StyledSubmit = styled.input`
   white-space: nowrap;
   margin: 0px;
   line-height: normal;
-  :hover {
-    color: black;
-    background-color: #fff;
-    border-color: black;
-  }
 `
 const StyledSelect = styled.select`
   border: 1px solid rgb(228, 229, 232);
