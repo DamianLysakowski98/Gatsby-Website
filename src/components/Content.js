@@ -12,6 +12,7 @@ const SectionWrapper = styled.section`
   display: flex;
   padding: 220px 0;
   width: 1200px;
+  margin: 0 auto;
 `
 const StyleSectionLeft = styled.section`
   z-index: 100;
