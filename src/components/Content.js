@@ -11,6 +11,7 @@ import Form from "../components/Element.js/Form"
 const SectionWrapper = styled.section`
   display: flex;
   padding: 220px 0;
+  width: 1200px;
 `
 const StyleSectionLeft = styled.section`
   z-index: 100;
