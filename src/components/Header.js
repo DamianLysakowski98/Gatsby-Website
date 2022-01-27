@@ -4,7 +4,9 @@ import styled from "styled-components"
 
 ////////// Image /////////////
 
-import Logo from "../image/Group 65.png"
+import Logo from "../image/test.svg"
+
+////////// Style /////////////
 
 const StyleFixedWrapper = styled.div`
   position: fixed;
@@ -16,7 +18,7 @@ const StyleFixedWrapper = styled.div`
 `
 
 const StyleNavigationWrapper = styled.div`
-  width: 1200px;
+  max-width: 1200px;
   height: 80px;
   margin: 16px auto 0 auto;
   padding-bottom: 16px;
@@ -37,13 +39,17 @@ const StyleNavigationLink = styled.p`
   border-radius: 5px;
   display: flex;
 `
+const StyleImage = styled.img`
+  width: 130px;
+  height: 40px;
+`
 
 const Header = () => {
   return (
     <StyleFixedWrapper>
       <StyleNavigationWrapper>
         <Link className="image-header" to="/404">
-          <img src={Logo} />
+          <StyleImage src={Logo} />
         </Link>
         <StyleNavigationLinkWrapper>
           <Link to="/404">

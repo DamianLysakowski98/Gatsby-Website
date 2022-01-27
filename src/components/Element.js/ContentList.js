@@ -3,7 +3,9 @@ import styled from "styled-components"
 
 ////////// Image /////////////
 
-import stroke from "../image/stroke.svg"
+import stroke from "../../image/stroke.svg"
+
+////////// Style /////////////
 
 const StyleListItem = styled.span`
   font-size: 18px;
@@ -16,6 +18,12 @@ const StyleListItem = styled.span`
 `
 const StyledWrapperList = styled.div`
   margin-top: 16px;
+  :hover {
+    img {
+      margin-left: 10px;
+      transform: rotate(360deg);
+    }
+  }
 `
 const StyledSpanAnimation = styled.span`
   position: relative;
@@ -36,15 +44,19 @@ const StyledSpanAnimation = styled.span`
     transition: all 0.2s ease 0s;
   }
 `
+const StyledImage = styled.img`
+  transition: all 0.6s ease 0s;
+`
 
 const Item = props => (
   <>
     <StyledWrapperList>
-      <img src={props.image} />
+      <StyledImage src={props.image} />
       <StyleListItem>{props.content}</StyleListItem>
     </StyledWrapperList>
   </>
 )
+
 const ContentList = props => {
   return (
     <>
@@ -63,7 +75,7 @@ const ContentList = props => {
       />
       <Item image={stroke} content="An offer tailored to your needs" />
       <StyledWrapperList>
-        <img src={stroke} />
+        <StyledImage src={stroke} />
         <StyleListItem>
           Access to the data{" "}
           <StyledSpanAnimation>that matters </StyledSpanAnimation>faster

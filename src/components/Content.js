@@ -3,12 +3,14 @@ import styled from "styled-components"
 
 ////////// Component /////////////
 
-import ContentList from "./ContentList"
-import Form from "./Form"
+import ContentList from "./Element.js/ContentList"
+import Form from "../components/Element.js/Form"
+
+////////// Style /////////////
 
 const SectionWrapper = styled.section`
   display: flex;
-  padding: 280px 0;
+  padding: 220px 0;
 `
 const StyleSectionLeft = styled.section`
   z-index: 100;
@@ -41,8 +43,9 @@ const StyledSpanAnimation = styled.span`
 const StyleSectionArticle = styled.p`
   font-size: 22px;
   line-height: 34px;
-  margin-top: 32px;
+  margin: 32px 30px 0 0;
   letter-spacing: 1px;
+  text-align: justify;
 `
 const StyleSectionListHeader = styled.h2`
   font-size: 18px;

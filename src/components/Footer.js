@@ -2,6 +2,8 @@ import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 
+////////// Style /////////////
+
 const StyledWrapper = styled.div`
   background: #f8f8f8;
   position: absolute;
@@ -24,10 +26,13 @@ const StyledHeader = styled.h2`
 const StyledItemListContent = styled.p`
   font-size: 16px;
   margin: 16px 0 0 0;
-  color: ${propsik => (propsik.blue ? "white !important" : "black")};
+  color: black;
+  :hover {
+    text-decoration: underline;
+  }
 `
 const StyledColumn = styled.div`
-  width: 17%;
+  width: 15%;
 `
 const StyledReadMore = styled.p`
   font-size: 16px;
