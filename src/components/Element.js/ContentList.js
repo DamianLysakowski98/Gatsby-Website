@@ -7,7 +7,7 @@ import stroke from "../../image/stroke.svg"
 
 ////////// Style /////////////
 
-const StyleListItem = styled.span`
+const StyledListItem = styled.span`
   font-size: 18px;
   line-height: 23px;
   margin-top: 16px;
@@ -52,7 +52,7 @@ const Item = props => (
   <>
     <StyledWrapperList>
       <StyledImage src={props.image} />
-      <StyleListItem>{props.content}</StyleListItem>
+      <StyledListItem>{props.content}</StyledListItem>
     </StyledWrapperList>
   </>
 )
@@ -76,10 +76,10 @@ const ContentList = props => {
       <Item image={stroke} content="An offer tailored to your needs" />
       <StyledWrapperList>
         <StyledImage src={stroke} />
-        <StyleListItem>
+        <StyledListItem>
           Access to the data{" "}
           <StyledSpanAnimation>that matters </StyledSpanAnimation>faster
-        </StyleListItem>
+        </StyledListItem>
       </StyledWrapperList>
     </>
   )

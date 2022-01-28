@@ -8,7 +8,7 @@ import Logo from "../image/test.svg"
 
 ////////// Style /////////////
 
-const StyleFixedWrapper = styled.div`
+const StyledFixedWrapper = styled.div`
   position: fixed;
   width: 100%;
   border-bottom: 1px solid #ddd;
@@ -17,7 +17,7 @@ const StyleFixedWrapper = styled.div`
   background-color: #fff;
 `
 
-const StyleNavigationWrapper = styled.div`
+const StyledNavigationWrapper = styled.div`
   max-width: 1200px;
   height: 80px;
   margin: 16px auto 0 auto;
@@ -26,10 +26,10 @@ const StyleNavigationWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 `
-const StyleNavigationLinkWrapper = styled.div`
+const StyledNavigationLinkWrapper = styled.div`
   display: flex;
 `
-const StyleNavigationLink = styled.p`
+const StyledNavigationLink = styled.p`
   font-size: 16px;
   font-weight: 800;
   text-decoration: none;
@@ -39,28 +39,28 @@ const StyleNavigationLink = styled.p`
   border-radius: 5px;
   display: flex;
 `
-const StyleImage = styled.img`
+const StyledImage = styled.img`
   width: 130px;
   height: 40px;
 `
 
 const Header = () => {
   return (
-    <StyleFixedWrapper>
-      <StyleNavigationWrapper>
+    <StyledFixedWrapper>
+      <StyledNavigationWrapper>
         <Link className="image-header" to="/404">
-          <StyleImage src={Logo} />
+          <StyledImage src={Logo} />
         </Link>
-        <StyleNavigationLinkWrapper>
+        <StyledNavigationLinkWrapper>
           <Link to="/404">
-            <StyleNavigationLink primary>Log in</StyleNavigationLink>
+            <StyledNavigationLink primary>Log in</StyledNavigationLink>
           </Link>
           <Link to="/404">
-            <StyleNavigationLink black>Sing up free</StyleNavigationLink>
+            <StyledNavigationLink black>Sing up free</StyledNavigationLink>
           </Link>
-        </StyleNavigationLinkWrapper>
-      </StyleNavigationWrapper>
-    </StyleFixedWrapper>
+        </StyledNavigationLinkWrapper>
+      </StyledNavigationWrapper>
+    </StyledFixedWrapper>
   )
 }
 export default Header

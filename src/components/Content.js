@@ -8,17 +8,17 @@ import Form from "../components/Element.js/Form"
 
 ////////// Style /////////////
 
-const SectionWrapper = styled.section`
+const StyledSectionWrapper = styled.section`
   display: flex;
   padding: 220px 0;
   width: 1200px;
   margin: 0 auto;
 `
-const StyleSectionLeft = styled.section`
+const StyledSectionLeft = styled.section`
   z-index: 100;
   width: 60%;
 `
-const StyleSectionHeader = styled.h1`
+const StyledSectionHeader = styled.h1`
   font-size: 48px;
   font-weight: 800;
   line-height: 60px;
@@ -42,14 +42,14 @@ const StyledSpanAnimation = styled.span`
     transition: all 0.2s ease 0s;
   }
 `
-const StyleSectionArticle = styled.p`
+const StyledSectionArticle = styled.p`
   font-size: 22px;
   line-height: 34px;
   margin: 32px 30px 0 0;
   letter-spacing: 1px;
   text-align: justify;
 `
-const StyleSectionListHeader = styled.h2`
+const StyledSectionListHeader = styled.h2`
   font-size: 18px;
   margin: 40px 0 24px 0;
   letter-spacing: 1px;
@@ -58,26 +58,26 @@ const StyleSectionListHeader = styled.h2`
 const Content = props => {
   return (
     <>
-      <SectionWrapper>
-        <StyleSectionLeft>
-          <StyleSectionHeader>
+      <StyledSectionWrapper>
+        <StyledSectionLeft>
+          <StyledSectionHeader>
             Request a LiveSession
             <br />
             <StyledSpanAnimation>demo today</StyledSpanAnimation>
-          </StyleSectionHeader>
-          <StyleSectionArticle>
+          </StyledSectionHeader>
+          <StyledSectionArticle>
             If you are wondering how LiveSession can help you get to know your
             visitors better, schedule an in-depth product demo and get an offer
             tailored to your needs.
-          </StyleSectionArticle>
+          </StyledSectionArticle>
           <ContentList>
-            <StyleSectionListHeader>
+            <StyledSectionListHeader>
               What you will get on of this demo:
-            </StyleSectionListHeader>
+            </StyledSectionListHeader>
           </ContentList>
-        </StyleSectionLeft>
+        </StyledSectionLeft>
         <Form />
-      </SectionWrapper>
+      </StyledSectionWrapper>
     </>
   )
 }
