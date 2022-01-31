@@ -12,6 +12,7 @@ const StyledFixedWrapper = styled.div`
   position: fixed;
   width: 100%;
   border-bottom: 1px solid #ddd;
+  top: 0;
   left: 0;
   z-index: 120;
   background-color: #fff;
@@ -20,14 +21,17 @@ const StyledFixedWrapper = styled.div`
 const StyledNavigationWrapper = styled.div`
   max-width: 1200px;
   height: 80px;
-  margin: 16px auto 0 auto;
-  padding-bottom: 16px;
+  margin: 0 auto;
+  padding: 16px 0 16px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `
 const StyledNavigationLinkWrapper = styled.div`
-  display: flex;
+  display: none;
+  @media (min-width: 780px) {
+    display: flex;
+  }
 `
 const StyledNavigationLink = styled.p`
   font-size: 16px;

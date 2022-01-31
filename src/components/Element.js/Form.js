@@ -4,12 +4,19 @@ import styled from "styled-components"
 ////////// Style /////////////
 
 const StyledForm = styled.form`
+  margin-top:44px;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width:100%
   justyfy-content: center;
+  padding:0 20px;
   aligne-items: center;
-  margin-left: 60px;
+  @media (min-width: 1080px) {
+    width: 40%;
+    margin-left: 60px;
+    margin-top:0px;
+    padding:0 0;
+  }
 `
 
 const StyledInput = styled.input`
@@ -22,7 +29,7 @@ const StyledInput = styled.input`
   border-radius: 4px;
   transition: all 0.2s ease 0s;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 24px;
 `
 
 const StyledTextarea = styled.textarea`
@@ -37,7 +44,7 @@ const StyledTextarea = styled.textarea`
   width: 100%;
   outline: 0px;
   resize: vertical;
-  margin-bottom: 28px;
+  margin-bottom: 47px;
 `
 const StyledLabel = styled.label`
   font-weight: 400;
@@ -80,7 +87,7 @@ const StyledSelect = styled.select`
   border-radius: 4px;
   transition: all 0.2s ease 0s;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 24px;
 `
 
 const Form = () => {

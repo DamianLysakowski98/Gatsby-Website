@@ -12,16 +12,21 @@ const StyledWrapper = styled.div`
   padding-top: 23px;
 `
 const StyledSectionWrapper = styled.div`
-  width: 1200px;
+  width: 100%;
   margin: 0 auto 40px auto;
   display: flex;
+  padding: 0 20px;
+  flex-wrap: wrap;
   justify-content: space-between;
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
 `
 
 const StyledHeader = styled.h2`
   font-size: 18px;
   font-weight: 800;
-  margin: 40px 0 16px 0;
+  margin: 40px 0 24px 0;
 `
 const StyledItemListContent = styled.p`
   font-size: 16px;
@@ -32,7 +37,13 @@ const StyledItemListContent = styled.p`
   }
 `
 const StyledColumn = styled.div`
-  width: 15%;
+  width: 40%;
+  @media (min-width: 780px) {
+    width: 30%;
+  }
+  @media (min-width: 1080px) {
+    width: 15%;
+  }
 `
 const StyledReadMore = styled.p`
   font-size: 16px;
