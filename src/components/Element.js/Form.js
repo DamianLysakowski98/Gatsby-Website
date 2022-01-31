@@ -1,4 +1,5 @@
 import React from "react"
+import { useForm } from "react-hook-form"
 import styled from "styled-components"
 
 ////////// Style /////////////
@@ -92,35 +93,45 @@ const StyledSelect = styled.select`
   margin-bottom: 24px;
 `
 
-const Form = () => {
+export default function Form() {
+  const { register, handleSubmit, reset } = useForm()
+  const onSubmit = data => {
+    console.log(data)
+    StyledForm.value = ""
+  }
   return (
-    <>
-      <StyledForm>
-        <StyledLabel for="name" maxlength="80">
-          Your full name
-        </StyledLabel>
-        <StyledInput type="text" name="name" />
-        <StyledLabel for="email">Business email</StyledLabel>
-        <StyledInput type="email" name="email" />
-        <StyledLabel for="companuName">Company Name</StyledLabel>
-        <StyledInput type="text" name="companuName" />
-        <StyledLabel type="url" for="companyUrl">
-          Company URL
-        </StyledLabel>
-        <StyledInput type="text" name="companyUrl" />
-        <StyledLabel for="traffic">Monthly traffic</StyledLabel>
-        <StyledSelect name="trafics">
-          <option value="100k">Less than 100 000 sesions</option>
-          <option value="50k">Less than 50 000 sesions</option>
-          <option value="20k">Less than 20 000 sesions</option>
-          <option value="10k">Less than 10 000 sesions</option>
-        </StyledSelect>
-        <StyledLabel for="companyUrl">How can we help</StyledLabel>
-        <StyledTextarea name="help" />
-        <StyledSubmit type="submit" value="BOOK A DEMO" />
-      </StyledForm>
-    </>
+    <StyledForm onSubmit={handleSubmit(onSubmit)}>
+      <StyledLabel>Your full name</StyledLabel>
+      <StyledInput
+        type="text"
+        {...register("name", { required: true, maxLength: 80 })}
+      />
+      <StyledLabel for="email">Business email</StyledLabel>
+      <StyledInput
+        type="email"
+        {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
+      />
+      <StyledLabel for="companuName">Company Name</StyledLabel>
+      <StyledInput
+        type="text"
+        {...register("companyName", { required: true, maxLength: 80 })}
+      />
+      <StyledLabel for="companyUrl">Company URL</StyledLabel>
+      <StyledInput type="url" {...register("companyURL", { required: true })} />
+      <StyledLabel for="traffic">Monthly traffic</StyledLabel>
+      <StyledSelect
+        {...register("trafics", { required: true, maxLength: 120 })}
+      >
+        <option value="100k">Less than 100 000 sesions</option>
+        <option value="50k">Less than 50 000 sesions</option>
+        <option value="20k">Less than 20 000 sesions</option>
+        <option value="10k">Less than 10 000 sesions</option>
+      </StyledSelect>
+      <StyledLabel for="help">How can we help</StyledLabel>
+      <StyledTextarea
+        {...register("help", { required: true, maxLength: 1000 })}
+      />
+      <StyledSubmit type="submit" value="BOOK A DEMO" />
+    </StyledForm>
   )
 }
-
-export default Form
