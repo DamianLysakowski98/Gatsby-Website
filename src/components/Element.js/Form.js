@@ -71,10 +71,12 @@ const StyledSubmit = styled.input`
   white-space: nowrap;
   margin: 0px;
   line-height: normal;
-  :hover {
-    color: black;
-    background-color: #fff;
-    border-color: black;
+  @media (min-width: 1080px) {
+    :hover {
+      color: black;
+      background-color: #fff;
+      border-color: black;
+    }
   }
 `
 const StyledSelect = styled.select`
@@ -94,7 +96,9 @@ const Form = () => {
   return (
     <>
       <StyledForm>
-        <StyledLabel for="name">Your full name</StyledLabel>
+        <StyledLabel for="name" maxlength="80">
+          Your full name
+        </StyledLabel>
         <StyledInput type="text" name="name" />
         <StyledLabel for="email">Business email</StyledLabel>
         <StyledInput type="email" name="email" />

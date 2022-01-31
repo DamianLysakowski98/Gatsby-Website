@@ -23,15 +23,6 @@ const StyledWrapperList = styled.div`
   display: flex;
   justify-content: start;
   aligne-items: center;
-
-  @media (min-width: 768px) {
-    :hover {
-      img {
-        margin-left: 10px;
-        transform: rotate(360deg);
-      }
-    }
-  }
 `
 const StyledSpanAnimation = styled.span`
   @media (min-width: 768px) {
